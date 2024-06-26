@@ -1,0 +1,354 @@
+/* Add additional stylesheets below
+-------------------------------------------------- */
+/*
+  Documentation based on Bootstrap's documentation style
+*/
+
+/* Body and structure
+-------------------------------------------------- */
+
+body {
+  position: relative;
+  padding-top: 40px;
+  line-height: 30px;
+  color: #666
+}
+h1, h2, h3, h4, h5, h6, strong, b,dl dt{
+  color: #2c3e50;
+}
+/* Code in headings */
+h3 code {
+  font-size: 14px;
+  font-weight: normal;
+}
+/* Container*/
+.container {
+  margin: 0;
+  margin-left: 350px; 
+  width: auto;
+  max-width: 1170px;
+}
+.alignright{
+  float:right;
+}
+/* Sections
+-------------------------------------------------- */
+/* padding for in-page bookmarks and fixed navbar */
+section {
+  padding-top: 30px;
+}
+
+section > ul li {
+  margin-bottom: 5px;
+}
+dl dt {
+	font-weight: bold;
+  font-size: 110%;
+  margin-bottom: 10px;
+}
+
+dl dd {
+	margin-bottom: 11px;
+	margin-left: 1em;
+}
+
+/* Footer
+-------------------------------------------------- */
+.footer {
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 70px;
+  border-top: 1px solid #e5e5e5;
+  background-color: #f8f5f5;
+}
+.footer p {
+  margin-bottom: 0;
+  color: #777;
+}
+.footer__links {
+  margin: 10px 0;
+}
+.footer__links li {
+  display: inline;
+  padding: 0 2px;
+}
+.footer__links li:first-child {
+  padding-left: 0;
+}
+
+/* Logo
+------------------------- */
+.sidebar__logo {
+  background: #84c700 none repeat scroll 0 0;
+  color: #0d141b;
+  font-family: "Open Sans",Arial,sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  margin: 0;
+  overflow: hidden;
+  padding: 40px 0;
+  }
+
+/* section
+------------------------- */
+section ol {
+  counter-reset: item;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+section ol > li {
+  counter-increment: item;
+  list-style: none;
+  margin-left: 10px;
+}
+section ol > li:before {
+  display: block;
+  float: left;
+  margin-left: -30px;
+  font-weight: bold;
+  text-align: right;
+  content: counter(item) ". ";
+}
+section h2, section h3 {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 10px;
+  clear: both;
+  margin-bottom: 30px;
+}
+section ul li, section ol li {
+  padding: 2px;
+  margin-bottom: 10px;
+}
+
+/* Sidenav for Docs
+-------------------------------------------------- */
+
+.sidebar__list {
+  width: 228px;
+  margin: 30px 0 0;
+  padding: 0;
+  background-color: #fff;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+     -moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+          box-shadow: 0 1px 4px rgba(0,0,0,.065);
+}
+.sidebar__list > li > a {
+  display: block;
+  width: 190px \9;
+  margin: 0 0 -1px;
+  padding: 8px 14px;
+  border: 1px solid #e5e5e5;
+}
+.sidebar__list > li:first-child > a {
+  -webkit-border-radius: 6px 6px 0 0;
+     -moz-border-radius: 6px 6px 0 0;
+          border-radius: 6px 6px 0 0;
+}
+.sidebar__list > li:last-child > a {
+  -webkit-border-radius: 0 0 6px 6px;
+     -moz-border-radius: 0 0 6px 6px;
+          border-radius: 0 0 6px 6px;
+}
+.sidebar__list > .active > a {
+  position: relative;
+  z-index: 2;
+  padding: 9px 15px;
+  border: 0;
+  text-shadow: 0 1px 0 rgba(0,0,0,.15);
+  -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+     -moz-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+          box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+}
+/* Chevrons */
+.sidebar__list .icon-chevron-right {
+  float: right;
+  margin-top: 2px;
+  margin-right: -6px;
+  opacity: .25;
+}
+.sidebar__list > li > a:hover {
+  background-color: #f8f5f5;
+}
+.sidebar__list a:hover .icon-chevron-right {
+  opacity: .5;
+}
+.sidebar__list .active .icon-chevron-right,
+.sidebar__list .active a:hover .icon-chevron-right {
+  background-image: url(../img/glyphicons-halflings-white.png);
+  opacity: 1;
+}
+.sidebar__list.affix {
+  top: 40px;
+}
+.sidebar__list.affix-bottom {
+  position: absolute;
+  top: auto;
+  bottom: 270px;
+}
+
+
+.sidebar__list a {
+  color: #444; 
+}
+.sidebar__list {
+  margin: 0 0;
+  padding: 0;
+  box-shadow: 0;
+  -webkit-box-shadow: 0;
+  left: 0;
+  top: 0;
+  right: auto;
+  bottom: 0;
+  left: 0;
+  background-color: #F8F5F5;
+  border-right: 1px solid #DDD7CC;
+  position: fixed;
+  overflow-y: auto;
+  border-radius: 0;
+}
+.sidebar__list.affix {
+  top: 0;
+}
+.sidebar__list > li:first-child > a, 
+.sidebar__list > li:last-child > a { 
+  border-radius: 0; -webkit-border-radius: 0; -moz-border-radius: 0; 
+}
+.sidebar__nav li ul {
+  font-size: 0.85em;
+  background: #F8F5F5;
+  list-style: none;
+  margin-top: 1px;
+  margin-left: 0;
+  display: none;
+  border-left: 15px solid #e5e5e5;
+}
+.sidebar__nav .active ul {
+  display: block;
+}
+.sidebar__list ul a {
+  padding: 8px 0;
+  padding-left: 20px;
+  display: block;
+  text-decoration: none;
+  border-top: 1px solid #e5e5e5;
+}
+.sidebar__list ul .active > a {
+  font-weight: 600;
+  background: #fbdbd9;
+}
+.sidebar__list > li > a { 
+  border-right: 0;
+  padding-left: 20px;
+  background: rgb(250, 250, 250);
+}
+
+
+
+/* Responsive
+-------------------------------------------------- */
+
+/* Desktop large
+------------------------- */
+@media (min-width: 1200px) {
+  .bs-docs-container {
+    max-width: 970px;
+  }
+  .sidebar__list {
+    width: 258px;
+  }
+  .sidebar__list > li > a {
+    width: 230px \9; /* Override the previous IE8-9 hack */
+  }
+}
+
+/* Desktop
+------------------------- */
+@media (max-width: 980px) {
+  /* Unfloat brand */
+  body > .navbar-fixed-top .brand {
+    float: left;
+    margin-left: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* When affixed, space properly */
+  .sidebar__list {
+    top: 0;
+    width: 218px;
+    margin-top: 30px;
+    margin-right: 0;
+  }
+}
+
+/* Tablet to desktop
+------------------------- */
+@media (min-width: 768px) and (max-width: 979px) {
+  /* Remove any padding from the body */
+  body {
+    padding-top: 0;
+  }
+  /* Adjust sidenav width */
+  .sidebar__list {
+    width: 166px;
+    margin-top: 20px;
+  }
+  .sidebar__list.affix {
+    top: 0;
+  }
+}
+
+/* Tablet
+------------------------- */
+@media (max-width: 767px) {
+  /* Remove any padding from the body */
+  body {
+    padding-top: 0;
+  } 
+
+  /* Sidenav */
+  .sidebar__list {
+    width: auto;
+    margin-bottom: 20px;
+  }
+  .sidebar__list.affix {
+    position: static;
+    width: auto;
+    top: 0;
+  }
+
+  /* Unfloat the back to top link in footer */
+  .footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .footer p {
+    margin-bottom: 9px;
+  }
+}
+
+/* Landscape phones
+------------------------- */
+@media (max-width: 480px) {
+  /* Remove padding above jumbotron */
+  body {
+    padding-top: 0;
+  }
+
+  /* Change up some type stuff */
+  h2 small {
+    display: block;
+  }
+
+  /* Tighten up footer */
+  .footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}

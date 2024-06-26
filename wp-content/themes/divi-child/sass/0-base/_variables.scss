@@ -1,0 +1,30 @@
+$img: '../images/';
+
+$breakpoints: (
+  xxs: 320px,
+  xs: 480px,
+  s: 768px,
+  m: 992px,
+  l: 1200px,
+  xl: 1400px,
+  xxl: 1600px,
+  xxxl: 1800px,
+  sl: 2000px,
+);
+
+// SIZING
+$base: 62.5%;
+
+// COLOR
+$prim: #F21B3F;
+$sec: #08BDBD;
+$default: #333;
+$white: #fff;
+
+//FONTS
+$font-fallback: Helvetica,Arial,sans-serif;
+$f-header: 'Montserrat';
+$f-default: 'Roboto';
+
+//SPACING
+$mbottom: 15px;

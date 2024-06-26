@@ -1,0 +1,129 @@
+
+div.description:hover {
+    z-index: 100;
+}
+
+div.description:hover > div {
+    opacity: 1;
+    width: 301px;
+    visibility: visible;
+    bottom: 30px;
+}
+
+div.description {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    position: relative;
+    z-index: 1;
+    background: url(../images/icon-tooltip.png) no-repeat 0 0;
+    cursor: help;
+    vertical-align: middle;
+}
+
+div.description:hover > div:hover, div.description > div {
+    width: 301px;
+    /* width: 0; */
+    background: #f6f6f6 url(../images/bkg_tooltip.png) repeat-y 100%;
+    opacity: 0;
+    position: absolute;
+    z-index: 999;
+    left: -296px;
+    bottom: 28px;
+    padding: 0 12px;
+    color: #464d50;
+    visibility: hidden;
+}
+
+div.description > div:before {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    content: '';
+    width: 325px;
+    height: 5px;
+    overflow: hidden;
+    background: url(../images/bkg_tooltip.png) no-repeat 0 0;
+}
+
+div.description > div:after {
+    position: absolute;
+    bottom: -14px;
+    left: -1px;
+    content: '';
+    width: 325px;
+    height: 14px;
+    overflow: hidden;
+    background: url(../images/bkg_tooltip.png) no-repeat -325px 0;
+}
+
+.sticky-wp {
+    position: fixed;
+    top: 65px;
+}
+
+.jch-group {
+    border: 1px #ccc solid;
+    padding: 0 10px 5px;
+    background-color: #fdfdfd;
+    margin: 20px 20px 20px 0;
+}
+
+.jch-group fieldset {
+    background-color: #fdfdfd !important;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.jch-group legend {
+    margin-bottom: 10px;
+    background-color: #3f3f3f;
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 15px;
+    line-height: 15px;
+}
+
+.jch-group td > input,
+.jch-group td > select,
+.jch-group td > div,
+.jch-group td button {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+fieldset[id^="jch_options_staticfiles"] ul,
+fieldset[id^="jch_options_pro_staticfiles"] ul,
+fieldset[id^="jch_options_pro_http2_file_types"] ul {
+    padding: 0;
+    margin: 0;
+    display: table;
+    width: 300px;
+}
+
+fieldset[id^="jch_options_staticfiles"] ul li,
+fieldset[id^="jch_options_pro_staticfiles"] ul li,
+fieldset[id^="jch_options_pro_http2_file_types"] ul li {
+    display: inline-table;
+    width: 20%
+}
+
+fieldset[id^="jch_options_staticfiles"] ul li label,
+fieldset[id^="jch_options_pro_staticfiles"] ul li label,
+fieldset[id^="jch_options_pro_http2_file_types"] ul li label {
+    margin-left: 5px !important;
+}
+
+#files-container ul li.file:nth-child(odd),
+#files-container ul li.file:nth-child(odd) input[type=text] {
+    background-color: #fdfdfd;
+}
+
+#files-container ul li.file:nth-child(even),
+#files-container ul li.file:nth-child(even) input[type=text] {
+    background-color: #f1f1f1;
+}
+
+ul.nav.nav-tabs > li > a:focus {
+    box-shadow: none;
+}

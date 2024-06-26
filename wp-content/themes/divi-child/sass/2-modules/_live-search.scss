@@ -1,0 +1,123 @@
+.home-banner{
+    z-index: 9;
+}
+
+.search{
+    &-banner{
+        position: relative;
+    }
+
+    &-wrap{
+        margin: 0 auto;
+
+        .input-wrap{
+            @include flex();
+            justify-content: center;
+
+            .input-item{
+                width: 70%;
+                position: relative;
+            }
+
+            input[type=text]{
+                border: 0px;
+                font-family: 'Nunito',Helvetica,Arial,Lucida,sans-serif;
+                font-size: 18px;
+                padding: 10px;
+                width: 100%;
+            }
+
+            button[type=submit]{
+                @include border-radius(0);
+                background: #41729F;
+                border: 0px;
+                color: #fff;
+                font-family: 'Nunito',Helvetica,Arial,Lucida,sans-serif;
+                font-size: 18px;
+                padding: 10px;
+            }
+
+            .livesearch-wrap{
+                position: absolute;
+                width: 100%;
+                background: #fff;
+                left: 0;
+                top: 45px;
+                z-index: 2;
+            }
+
+            .livesearch-loader{
+                text-align: center;
+                margin: 0 auto;
+                padding: 10px 0;
+
+                svg{
+                    z-index: 2;
+                }
+
+                svg path,
+                svg rect{
+                    fill: $prim;
+                }
+            }
+
+            .livesearch-item{
+                color: #333;
+                padding: 10px;
+                border-left: 1px solid #d2d2d2;
+                border-right: 1px solid #d2d2d2;
+                border-bottom: 1px solid #d2d2d2;
+                display: block;
+                @include transition('background 0.3s ease');
+
+                .title{
+                    h6{
+                        font-size: 20px;
+                    }
+                }
+
+                .author{
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                    span{
+                        font-weight: bold;
+                    }
+                }
+                
+                &:hover{
+                    color: #fff;
+                    background: lighten($prim, 10%);
+
+                    .title{
+                        h6{
+                            color: #fff;
+                            font-size: 20px;
+                        }
+                    }
+
+                    .author{
+                        font-size: 16px;
+                        
+                        span{
+                            font-weight: 500;
+                        }
+                    }
+
+                    .description{
+                        color: #fff;
+                    }
+                }
+            }
+
+            .livesearch-item.nothing-item{     
+                h4{
+                    margin-top: 7px;
+                    text-align: center;
+                }
+                &:hover{
+                    background: #fff;
+                }
+            }
+        }
+    }
+}

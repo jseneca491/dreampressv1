@@ -1,0 +1,212 @@
+body{
+    color: $default;
+    font-family: $f-default;
+    font-size: rem-calc(16);
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: $f-default, $font-fallback;
+    font-weight: bold;
+}
+
+h1{
+    font-size: rem-calc(35);
+}
+
+h2{
+    font-size: rem-calc(32);
+}
+
+h3{
+    font-size: rem-calc(29);
+}
+
+h4{
+    font-size: rem-calc(26);
+}
+
+h5{
+    font-size: rem-calc(23);
+}
+
+h6{
+    font-size: rem-calc(20);
+}
+
+hr{
+    margin-bottom: 30px;
+}
+
+p{
+    font-family: $f-default;
+    color: $default;
+}
+
+ul, ol{
+    padding-bottom: rem-calc(15px);
+}
+
+a{
+    color: $sec;
+}
+
+button, input[type=submit], input[type=button]{
+    background: $prim;
+    border: 1px solid $prim;
+    color: $white;
+    padding: 15px 30px;
+    margin-bottom: 15px;
+    @include border-radius(3px);
+    @include transition(background 200ms ease-in);
+
+   &:hover, &:active, &:focus{
+       background: lighten($prim, 10%);
+   }
+}
+
+.btn-link{
+    background: $prim;
+    border: 1px solid $prim;
+    color: $white;
+    display: inline-block;
+    padding: 15px 30px;
+    margin-bottom: 15px;
+    @include border-radius(3px);
+    @include transition(background 200ms ease-in);
+
+   &:hover, &:active, &:focus{
+       background: lighten($prim, 10%);
+   }
+}
+
+//TYPOGRAPHY
+.ds-header{
+    margin-top: 15px;
+}
+
+.dropcaps {
+    color: $prim;
+    font-size: 3.33em;
+    font-weight: 700;
+    float: left;
+    margin: 0 10px 0 0;
+    line-height: 1;
+    position: relative;
+}
+
+blockquote {
+
+    font-style: normal;
+    font-weight: 500;
+    font-family: $f-default;
+    letter-spacing: 0em;
+    text-transform: none;
+    font-size: 24px;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 60px;
+    margin: 35px 0;
+    clear: left;
+		border: 0;
+}
+blockquote:before {
+
+    font-family: Poppins, sans-serif;
+    color: rgb(199,199,199);
+    content: '\0022';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    display: block;
+    font-size: 112px;
+    line-height: 1;
+    font-style: italic;
+}
+blockquote cite {
+    color: #899296;
+    display: block;
+    margin-top: 15px;
+    margin-left: -60px;
+    padding-left: 60px;
+    position: relative;
+}
+blockquote cite:before {
+    content: '';
+    width: 35px;
+    height: 1px;
+    margin-right: 25px;
+    vertical-align: middle;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    background-color: rgb(199,199,199);
+    top: calc((2.5*14px)/2);
+}
+
+ins {
+    text-decoration: none;
+    background: $prim;
+    padding: 0px 5px;
+}
+
+//PAGINATION
+.pagination{
+    ul.page-numbers{
+        padding: 0 !important;
+
+        li{
+            border: 1px solid #CFCFCF;
+            display: inline;
+            list-style-type: none inside disc;
+            padding: 5px 10px;
+        }
+    }
+}
+
+//FORM
+label{
+    font-size: rem-calc(18px);
+}
+
+input[type=text], input[type=email], input[type=date], input[type=number], input[type=search], input[type=tel], input[type=url]{
+    font-family: $f-default;
+    font-size: rem-calc(16px);
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    width: 100%;
+    @include border-radius(3px);
+
+    &:focus{
+        border-color: #000;
+    }
+}
+
+form input[type=submit]{
+    margin-top: 40px;
+}
+
+select{
+    background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
+    background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+    background-size: 5px 5px, 5px 5px, 1px 1.5em;
+    background-repeat: no-repeat;
+    font-family: $f-default;
+    font-size: rem-calc(16px);
+    margin-bottom: 10px;
+    padding: 10px 50px 10px 10px;
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    @include border-radius(3px);
+}
+
+textarea{
+    font-family: $f-default;
+    font-size: rem-calc(16px);
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    width: 100%;
+    resize: none;
+    @include border-radius(3px);
+}
